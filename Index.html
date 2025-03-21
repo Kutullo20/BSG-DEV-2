@@ -15,7 +15,7 @@
             justify-content: flex-start;
             background-color: grey;
             height: 90vh;
-            width: 47px;
+            width: 747px;
             border-radius: 7px;
             align-items: center;
             gap: 40px
@@ -27,14 +27,30 @@
             flex-direction: column;
             justify-content: space-around;
             border-radius: 10px;
-            height: 90vh;
-            width: 90vh;
+            height: 60vh;
+            width: 180px;
+            align-items: flex-start;
+            left: 7px;
+            background-color: aqua;
+            margin-top: 5px;
+        }
+
+        .circle-icon {
+            display: flex;
+            position: relative;
+            justify-content: center;
             align-items: center;
-            left: 8px;
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            background-color: rgba(0, 0, 0, 0.2); 
+            margin: 5px 0;
+            left: 5px; 
         }
 
         .fas{
             color: black;
+            position: relative;
             font-size: 27px;
         }
 
@@ -48,31 +64,28 @@
         }
 
         .second-nav-container{
-            background-color: grey;
-            height: 90vh;
+            background-color: darkgrey;
+            height: 60vh;
             width: 380px;
             border-radius: 7px;
         }
     </style>
 </head>
-    <main>
-        <body>
-
+    <body>
+        <main>
             <div class="side-bar-nav-wrapper">
                 <div class="first-left-nav-container">
-                    <i class="fas fa-list" title="Task List"></i> 
-                    <i class="fas fa-calendar" title="Calendar"></i>
-                    <i class="fas fa-check-circle" title="Completed Tasks"></i> 
-                    <i class="fas fa-plus-circle" title="Add Task"></i> 
-                    <i class="fas fa-cog" title="Settings"></i> 
+                    <div class="circle-icon"><i class="fas fa-list" title="Task List"></i></div>
+                    <div class="circle-icon"><i class="fas fa-calendar" title="Calendar"></i></div>
+                    <div class="circle-icon"><i class="fas fa-check-circle" title="Completed Tasks"></i></div>
+                    <div class="circle-icon"><i class="fas fa-plus-circle" title="Add Task"></i></div>
+                    <div class="circle-icon"><i class="fas fa-cog" title="Settings"></i></div>
                 </div>
                 
                 <div class="second-nav-frame-wrapper">
                     <div class="second-nav-container"></div>
                 </div>
             </div>
-
-        </body>
-    </main>
-
+        </main>
+    </body>
 </html>
