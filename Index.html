@@ -18,7 +18,7 @@
             width: 747px;
             border-radius: 7px;
             align-items: center;
-            gap: 40px
+            gap: 40px;
         }
 
         .first-left-nav-container{
@@ -28,36 +28,61 @@
             justify-content: space-around;
             border-radius: 10px;
             height: 60vh;
-            width: 201px;
+            width: 200px;
             align-items: flex-start;
             left: 7px;
             background-color: aqua;
             margin-top: 5px;
+            padding: 10px;
         }
 
         .circle-icon {
             display: flex;
             position: relative;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            width: 40px; 
-            height: 40px; 
-            border-radius: 50%; 
-            background-color: rgba(0, 0, 0, 0.2); 
+            width: 100%; 
             margin: 5px 0;
-            left: 5px; 
         }
 
-        .fas{
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-container i {
             color: black;
-            position: relative;
             font-size: 27px;
         }
 
-        .fas:hover{
+        .icon-container i:hover {
             color: aliceblue;
         }
 
+        .button-container {
+            margin-left: 10px; 
+        }
+
+        .button-container button {
+            padding: 5px 10px;
+            border: none;
+            border-top-right-radius: 9px;
+            border-bottom-right-radius: 9px;
+            background-color: #4CAF50; 
+            color: white; 
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+    
         .second-nav-frame-wrapper{
             display: flex;
             position: relative;
@@ -75,7 +100,14 @@
         <main>
             <div class="side-bar-nav-wrapper">
                 <div class="first-left-nav-container">
-                    <div class="circle-icon"><i class="fas fa-list" title="Task List"></i></div>
+                    <div class="circle-icon">
+                        <div class="icon-container">
+                            <i class="fas fa-list" title="Task List"></i>
+                        </div>
+                        <div class="button-container">
+                            <button>Task List</button>
+                        </div>
+                    </div>
                     <div class="circle-icon"><i class="fas fa-calendar" title="Calendar"></i></div>
                     <div class="circle-icon"><i class="fas fa-check-circle" title="Completed Tasks"></i></div>
                     <div class="circle-icon"><i class="fas fa-plus-circle" title="Add Task"></i></div>
