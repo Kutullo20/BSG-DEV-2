@@ -13,6 +13,14 @@
             box-sizing: border-box;
             margin: 0;
         }
+
+        .wrapper{
+            background-color: #ffffff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
         .side-bar-nav-wrapper{
             display: flex;
             position: relative;
@@ -105,57 +113,59 @@
 </head>
     <body>
         <main>
-            <div class="side-bar-nav-wrapper">
-                <div class="first-left-nav-container">
-                    <div class="circle-icon">
-                        <div class="icon-container">
-                            <i class="fas fa-list" title="Task List"></i>
+            <div class="wrapper">
+                <div class="side-bar-nav-wrapper">
+                    <div class="first-left-nav-container">
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-list" title="Task List"></i>
+                            </div>
+                            <div class="button-container">
+                                <button>Task List</button>
+                            </div>
                         </div>
-                        <div class="button-container">
-                            <button>Task List</button>
-                        </div>
-                    </div>
 
-                    <div class="circle-icon">
-                        <div class="icon-container">
-                            <i class="fas fa-calendar" title="Calendar"></i>
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-calendar" title="Calendar"></i>
+                            </div>
+                            <div class="button-container">
+                                <button>Calender</button>
+                            </div>
                         </div>
-                        <div class="button-container">
-                            <button>Calender</button>
-                        </div>
-                    </div>
 
-                    <div class="circle-icon">
-                        <div class="icon-container">
-                            <i class="fas fa-check-circle" title="Completed Tasks"></i>
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-check-circle" title="Completed Tasks"></i>
+                            </div>
+                            <div class="button-container">
+                                <button>Completed Tasks</button>
+                            </div>
                         </div>
-                        <div class="button-container">
-                            <button>Completed Tasks</button>
-                        </div>
-                    </div>
 
-                    <div class="circle-icon">
-                        <div class="icon-container">
-                            <i class="fas fa-plus-circle" title="Add Task"></i>
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-plus-circle" title="Add Task"></i>
+                            </div>
+                            <div class="button-container">
+                                <button>Add Task</button>
+                            </div>
                         </div>
-                        <div class="button-container">
-                            <button>Add Task</button>
-                        </div>
-                    </div>
 
-                    <div class="circle-icon">
-                        <div class="icon-container">
-                            <i class="fas fa-cog" title="Settings"></i>
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-cog" title="Settings"></i>
+                            </div>
+                            <div class="button-container">
+                                <button>Settings</button>
+                            </div>
                         </div>
-                        <div class="button-container">
-                            <button>Settings</button>
-                        </div>
-                    </div>
 
-                </div>
-                
-                <div class="second-nav-frame-wrapper">
-                    <div class="second-nav-container"></div>
+                    </div>
+                    
+                    <div class="second-nav-frame-wrapper">
+                        <div class="second-nav-container"></div>
+                    </div>
                 </div>
             </div>
         </main>
