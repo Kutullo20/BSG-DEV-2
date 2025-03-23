@@ -21,6 +21,79 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
+
+        .header {
+            margin-top: 15vh;
+            margin-left: 35px;
+            margin-bottom: 10px;
+            padding: 15px;
+            background-color: black;
+            max-width: 990px;
+            height: 50px;
+            border-top-right-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly; 
+            position: relative;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+        }
+        .header-item {
+            display: flex;
+            align-items: center;
+            color: white;
+            gap: 8px;
+            font-size: 16px;
+        }
+        .header-item i {
+            font-size: 20px;
+            color: #4CAF50; 
+        }
+        .social-icons-container {
+            position: absolute;
+            top: -40px; 
+            left: 0; 
+            display: flex;
+            align-items: center; 
+            gap: 10px; 
+            width: 100%; 
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-right: auto; 
+        }
+        .logo-icon {
+            font-size: 24px;
+            color: black; 
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: black; 
+        }
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: 2px solid #4CAF50; 
+            background-color: transparent;
+            color: #4CAF50; 
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .social-icon:hover {
+            background-color: #4CAF50; 
+            color: white; 
+        }
         .side-bar-nav-wrapper{
             display: flex;
             position: relative;
@@ -33,6 +106,8 @@
             align-items: center;
             gap: 60px;
         }
+
+        
 
         .first-left-nav-container{
             display: flex;
@@ -114,6 +189,54 @@
     <body>
         <main>
             <div class="wrapper">
+
+                <div class="header">
+                   
+                    <div class="social-icons-container">
+                       
+                        <div class="logo-container">
+                            <i class="fas fa-tasks logo-icon"></i> 
+                            <div class="logo-text">
+                                ToDo.com
+                            </div>
+                        </div>
+                      
+                        <div class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+        
+                   
+                    <div class="header-left">
+                        <div class="header-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div class="header-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Organized</span>
+                        </div>
+                        <div class="header-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Efficient</span>
+                        </div>
+                        <div class="header-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Smart</span>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="side-bar-nav-wrapper">
                     <div class="first-left-nav-container">
                         <div class="circle-icon">
