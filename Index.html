@@ -523,7 +523,37 @@
                     </div>
                     
                     <div class="second-nav-frame-wrapper">
-                        <div class="second-nav-container"></div>
+                        <div class="second-nav-container">
+
+                             <!-- View Taks -->
+                            <div id="taskListView">
+                                <h2>Your Tasks</h2>
+                                <div id="tasksList" class="task-list">
+                                    <p class="empty-message">No tasks yet. Add your first task!</p>
+                                </div>
+                            </div>
+
+                             <!-- Add Taks -->
+                            <div id="addTaskView" style="display: none;">
+                                <h2>Add New Task</h2>
+                                <form id="addTaskForm" class="add-task-form">
+                                    <div class="form-group">
+                                        <label for="taskTitle">Task Title</label>
+                                        <input type="text" id="taskTitle" required>
+                                    </div>
+                                    <button type="submit" class="submit-btn">Add Task</button>
+                                </form>
+                            </div>
+
+                            <!-- Completed Taks -->
+                            <div id="completedTasksView" style="display: none;">
+                                <h2>Completed Tasks</h2>
+                                <div id="completedTasksList" class="task-list">
+                                    <p class="empty-message">No completed tasks yet.</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
