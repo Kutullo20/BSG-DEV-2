@@ -101,3 +101,37 @@ function renderTasks(completed) {
     });
 }
 
+// Task Actions
+function handleTaskAction(action, taskId) {
+    const taskIndex = tasks.findIndex(t => t.id === taskId);
+    if (taskIndex === -1) return;
+    
+    switch(action) {
+        case 'complete':
+            tasks[taskIndex].completed = !tasks[taskIndex].completed;
+            break;
+        case 'edit':
+            const task = tasks[taskIndex];
+            if (task.completed) return;
+            editingTaskId = taskId;
+            document.getElementById('taskTitle').value = task.title;
+            showView('addTask');
+            document.getElementById('taskTitle').focus();
+            return;
+        case 'delete':
+            if (!confirm('Are you sure you want to delete this task?')) return;
+            tasks = tasks.filter(t => t.id !== taskId);
+            break;
+    }
+    
+    saveTasks();
+    // Remain/static in current view after action
+    const currentView = Object.keys(views).find(view => views[view].style.display === 'block');
+    showView(currentView);
+}
+
+// Save Tasks
+function saveTasks() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
