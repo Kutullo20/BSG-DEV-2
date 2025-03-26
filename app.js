@@ -34,3 +34,16 @@ function setupEventListeners() {
     addTaskForm.addEventListener('submit', handleTaskSubmit);
     mobileMenuBtn.addEventListener('click', () => headerLeft.classList.toggle('active'));
 }
+
+// View Management
+function showView(viewName) {
+    Object.values(views).forEach(view => view.style.display = 'none');
+    Object.values(buttons).forEach(btn => btn.classList.remove('active'));
+    
+    views[viewName].style.display = 'block';
+    buttons[viewName].classList.add('active');
+    
+    if (viewName === 'taskList') renderTasks(false);
+    else if (viewName === 'completedTasks') renderTasks(true);
+    else if (editingTaskId === null) addTaskForm.reset();
+}
