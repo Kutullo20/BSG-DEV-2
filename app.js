@@ -15,3 +15,22 @@ const buttons = {
 const addTaskForm = document.getElementById('addTaskForm');
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const headerLeft = document.getElementById('headerLeft');
+
+// Tasks
+let tasks = [];
+let editingTaskId = null;
+
+// Start
+document.addEventListener('DOMContentLoaded', () => {
+    tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    setupEventListeners();
+    showView('taskList');
+});
+
+// Event Listeners
+function setupEventListeners() {
+    Object.entries(buttons).forEach(([view, btn]) => 
+        btn.addEventListener('click', () => showView(view)));
+    addTaskForm.addEventListener('submit', handleTaskSubmit);
+    mobileMenuBtn.addEventListener('click', () => headerLeft.classList.toggle('active'));
+}
