@@ -47,3 +47,26 @@ function showView(viewName) {
     else if (viewName === 'completedTasks') renderTasks(true);
     else if (editingTaskId === null) addTaskForm.reset();
 }
+
+// Handling Taks
+function handleTaskSubmit(e) {
+    e.preventDefault();
+    const title = document.getElementById('taskTitle').value.trim();
+    if (!title) return;
+    
+    if (editingTaskId !== null) {
+        const task = tasks.find(t => t.id === editingTaskId);
+        if (task) task.title = title;
+    } else {
+        tasks.push({
+            id: Date.now(),
+            title,
+            completed: false,
+            createdAt: new Date().toISOString()
+        });
+    }
+    
+    editingTaskId = null;
+    saveTasks();
+    showView('taskList');
+}
