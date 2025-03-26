@@ -70,3 +70,34 @@ function handleTaskSubmit(e) {
     saveTasks();
     showView('taskList');
 }
+
+// Render Tasks
+function renderTasks(completed) {
+    const container = completed ? lists.completed : lists.tasks;
+    const filteredTasks = tasks.filter(task => task.completed === completed);
+    
+    container.innerHTML = filteredTasks.length ? '' : 
+        `<p class="empty-message">No ${completed ? 'completed' : ''} tasks yet.</p>`;
+    
+    filteredTasks.forEach(task => {
+        const taskElement = document.createElement('div');
+        taskElement.className = `task-item ${completed ? 'completed' : ''}`;
+        taskElement.innerHTML = `
+            <div class="task-title">${task.title}</div>
+            <div class="task-actions">
+                <button class="task-btn complete-btn" data-id="${task.id}">
+                    ${completed ? 'Undo' : 'Complete'}
+                </button>
+                ${!completed ? `<button class="task-btn edit-btn" data-id="${task.id}">Edit</button>` : ''}
+                <button class="task-btn delete-btn" data-id="${task.id}">Delete</button>
+            </div>
+        `;
+        
+        container.appendChild(taskElement);
+        ['complete', 'edit', 'delete'].forEach(action => {
+            const btn = taskElement.querySelector(`.${action}-btn`);
+            if (btn) btn.addEventListener('click', () => handleTaskAction(action, task.id));
+        });
+    });
+}
+
