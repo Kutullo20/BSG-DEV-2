@@ -38,7 +38,14 @@ function showNotification(message, type = 'success') {
 
 // Start
 document.addEventListener('DOMContentLoaded', () => {
-    tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    // Load tasks from localStorage
+    try {
+        const savedTasks = localStorage.getItem('tasks');
+        tasks = savedTasks ? JSON.parse(savedTasks) : [];
+    } catch (e) {
+        console.error("Error loading tasks:", e);
+        tasks = [];
+    }
     showView('taskList');
     setupEventListeners();
    
