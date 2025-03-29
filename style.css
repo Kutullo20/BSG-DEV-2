@@ -506,3 +506,34 @@ body {
     color: #666;
     margin-top: 20px;
 }
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.notification.error {
+    background: #f44336;
+}
+
+.notification.fade-out {
+    opacity: 0;
+}
+
+.notification i {
+    font-size: 1.2rem;
+}
