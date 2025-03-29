@@ -144,6 +144,7 @@ function handleTaskAction(action, taskId) {
     switch(action) {
         case 'complete':
             tasks[taskIndex].completed = !tasks[taskIndex].completed;
+            showNotification(`Task ${tasks[taskIndex].completed ? 'completed' : 'marked incomplete'}`);
             break;
         case 'edit':
             const task = tasks[taskIndex];
@@ -156,11 +157,11 @@ function handleTaskAction(action, taskId) {
         case 'delete':
             if (!confirm('Are you sure you want to delete this task?')) return;
             tasks = tasks.filter(t => t.id !== taskId);
+            showNotification('Task deleted successfully!');
             break;
     }
     
     saveTasks();
-    // Remain/static in current view after action
     const currentView = Object.keys(views).find(view => views[view].style.display === 'block');
     showView(currentView);
 }
