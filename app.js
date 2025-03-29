@@ -114,14 +114,21 @@ function renderTasks(completed) {
             <div class="task-title">${task.title}</div>
             <div class="task-actions">
                 <button class="task-btn complete-btn" data-id="${task.id}">
+                    <i class="fas fa-${completed ? 'undo' : 'check'}"></i>
                     ${completed ? 'Undo' : 'Complete'}
                 </button>
-                ${!completed ? `<button class="task-btn edit-btn" data-id="${task.id}">Edit</button>` : ''}
-                <button class="task-btn delete-btn" data-id="${task.id}">Delete</button>
+                ${!completed ? `
+                <button class="task-btn edit-btn" data-id="${task.id}">
+                    <i class="fas fa-edit"></i> Edit
+                </button>` : ''}
+                <button class="task-btn delete-btn" data-id="${task.id}">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
             </div>
         `;
         
         container.appendChild(taskElement);
+        
         ['complete', 'edit', 'delete'].forEach(action => {
             const btn = taskElement.querySelector(`.${action}-btn`);
             if (btn) btn.addEventListener('click', () => handleTaskAction(action, task.id));
