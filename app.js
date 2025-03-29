@@ -80,7 +80,10 @@ function handleTaskSubmit(e) {
     
     if (editingTaskId !== null) {
         const task = tasks.find(t => t.id === editingTaskId);
-        if (task) task.title = title;
+        if (task) {
+            task.title = title;
+            showNotification('Task updated successfully!');
+        }
     } else {
         tasks.push({
             id: Date.now(),
@@ -88,6 +91,7 @@ function handleTaskSubmit(e) {
             completed: false,
             createdAt: new Date().toISOString()
         });
+        showNotification('Task added successfully!');
     }
     
     editingTaskId = null;
