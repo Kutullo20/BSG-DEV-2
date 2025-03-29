@@ -23,8 +23,9 @@ let editingTaskId = null;
 // Start
 document.addEventListener('DOMContentLoaded', () => {
     tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    setupEventListeners();
     showView('taskList');
+    setupEventListeners();
+   
 });
 
 // Event Listeners
