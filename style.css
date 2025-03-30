@@ -1,7 +1,8 @@
- /* TEXT FONTS */
- @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* TEXT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+/* Global Styles */
+* {
     box-sizing: border-box;
     margin: 0;
 }
@@ -14,7 +15,8 @@ body {
     font-size: 20px;
 }
 
-.wrapper{
+/* Wrapper */
+.wrapper {
     background-color: #ffffff;
     margin: 20px;
     border-radius: 10px;
@@ -23,6 +25,7 @@ body {
     height: 65vh;
 }
 
+/* Header */
 .header {
     margin-top: 15vh;
     margin-left: 35px;
@@ -37,11 +40,13 @@ body {
     justify-content: space-evenly; 
     position: relative;
 }
+
 .header-left {
     display: flex;
     align-items: center;
     gap: 20px; 
 }
+
 .header-item {
     display: flex;
     align-items: center;
@@ -49,10 +54,12 @@ body {
     gap: 8px;
     font-size: 16px;
 }
+
 .header-item i {
     font-size: 20px;
     color: #4CAF50; 
 }
+
 .social-icons-container {
     position: absolute;
     top: -40px; 
@@ -62,6 +69,7 @@ body {
     gap: 10px; 
     width: 100%; 
 }
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -69,13 +77,16 @@ body {
     margin-right: auto; 
     color: black;
 }
+
 .logo-icon {
     font-size: 24px; 
 }
+
 .logo-text {
     font-size: 20px;
     font-weight: bold;
 }
+
 .social-icon {
     display: flex;
     justify-content: center;
@@ -90,11 +101,14 @@ body {
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
+
 .social-icon:hover {
     background-color: #4CAF50; 
     color: white; 
 }
-.side-bar-nav-wrapper{
+
+/* Sidebar */
+.side-bar-nav-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -105,15 +119,13 @@ body {
     margin-left: 20px;
 }
 
-
- .user-icon-container {
+.user-icon-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px; 
     margin-top: 5px; 
 }
-
 
 .user-icon-circle {
     display: flex;
@@ -135,7 +147,7 @@ body {
     color: #4CAF50; 
 }
 
-
+/* Welcome Text */
 .welcome-text {
     display: flex;
     align-items: center;
@@ -149,8 +161,8 @@ body {
     color: #4CAF50;
 }
 
-
-.first-left-nav-container{
+/* Navigation */
+.first-left-nav-container {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -214,14 +226,14 @@ body {
     color: black;
 }
 
-
-.second-nav-frame-wrapper{
+/* Second Navigation */
+.second-nav-frame-wrapper {
     display: flex;
     width: 60%;
     min-height: 60vh;
 }
 
-.second-nav-container{
+.second-nav-container {
     width: 100%;
     background-color: darkgrey;
     min-height: 60vh;
@@ -229,7 +241,7 @@ body {
     border-top-right-radius: 10px;
 }
 
-/* The Close Button */
+/* Close Button */
 .close {
     display: none;
     color: #aaaaaa;
@@ -243,8 +255,9 @@ body {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    }
-/* Responsive-Design */
+}
+
+/* Responsive Design */
 @media (max-width: 1032px) {
     .second-nav-frame-wrapper {
         width: 55%;
@@ -260,7 +273,6 @@ body {
 }
 
 @media (max-width: 987px) {
-
     .first-left-nav-container {
         flex-direction: column;
         flex-wrap: wrap;
@@ -306,7 +318,7 @@ body {
         text-align: left;
     }
 
-    .second-nav-frame-wrapper{
+    .second-nav-frame-wrapper {
         display: none;
         position: fixed; 
         z-index: 1; 
@@ -330,7 +342,6 @@ body {
         display: inline;
     }
 
-    
     .header-item {
         font-size: 16px; 
     }
@@ -339,7 +350,6 @@ body {
         font-size: 20px; 
     }
 
-    
     .user-icon-circle {
         width: 80px;
         height: 80px;
@@ -385,65 +395,64 @@ body {
 }
 
 @media (max-width: 480px) {
+    .logo-container {
+        font-size: 1.5em;
+    }
 
-.logo-container {
-    font-size: 1.5em;
-}
+    .first-left-nav-container {
+        flex-direction: column;
+        width: 90%;
+        margin-left: 20px;
+        padding: 10px 40px;
+    }
 
-.first-left-nav-container {
-    flex-direction: column;
-    width: 90%;
-    margin-left: 20px;
-    padding: 10px 40px;
+    .circle-icon {
+        flex-direction: row;
+        width: 100%;
+        margin: 8px 0;
+        padding: 0;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
-}
+    .icon-container {
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
 
-.circle-icon {
-    flex-direction: row;
-    width: 100%;
-    margin: 8px 0;
-    padding: 0;
-    justify-content: flex-start;
-    align-items: center;
-}
+    .button-container {
+        width: auto;
+    }
 
-.icon-container {
-    margin-right: 15px;
-    margin-bottom: 0;
-}
+    .button-container button {
+        width: auto;
+        min-width: 170px;
+        padding: 8px 12px;
+        text-align: left;
+    }
 
-.button-container {
-    width: auto;
-}
+    .header-item {
+        font-size: 14px;
+    }
 
-.button-container button {
-    width: auto;
-    min-width: 170px;
-    padding: 8px 12px;
-    text-align: left;
-}
+    .header-item i {
+        font-size: 16px;
+    }
 
+    .user-icon-circle {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
 
-.header-item {
-    font-size: 14px;
-}
-
-.header-item i {
-    font-size: 16px;
-}
-
-.user-icon-circle {
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
-}
-
-.welcome-text {
-    font-size: 14px;
-}
+    .welcome-text {
+        font-size: 14px;
+    }
 }
 
 /* Functionality Styles */
+
+/* Task Item */
 .task-item {
     background-color: white;
     padding: 15px;
@@ -498,7 +507,7 @@ h2 {
     text-decoration: line-through;
 }
 
-/* Add  form */
+/* Add Task Form */
 .add-task-form {
     margin-top: 20px;
 }
@@ -529,16 +538,14 @@ h2 {
     width: 100%;
 }
 
-/* Empty */
+/* Empty Message */
 .empty-message {
     text-align: center;
     color: #666;
     margin-top: 20px;
 }
 
-
-
-/* Notification styles */
+/* Notification Styles */
 .notification {
     position: fixed;
     top: 20px;
