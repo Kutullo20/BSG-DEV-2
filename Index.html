@@ -7,85 +7,137 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .side-bar-nav-wrapper{
-            display: flex;
-            position: relative;
-            justify-content: flex-start;
-            background-color: grey;
-            height: 90vh;
-            width: 747px;
-            border-radius: 7px;
-            align-items: center;
-            gap: 40px
-        }
-
-        .first-left-nav-container{
-            display: flex;
-            position: relative;
-            flex-direction: column;
-            justify-content: space-around;
-            border-radius: 10px;
-            height: 60vh;
-            width: 180px;
-            align-items: flex-start;
-            left: 7px;
-            background-color: aqua;
-            margin-top: 5px;
-        }
-
-        .circle-icon {
-            display: flex;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-            width: 40px; 
-            height: 40px; 
-            border-radius: 50%; 
-            background-color: rgba(0, 0, 0, 0.2); 
-            margin: 5px 0;
-            left: 5px; 
-        }
-
-        .fas{
-            color: black;
-            position: relative;
-            font-size: 27px;
-        }
-
-        .fas:hover{
-            color: aliceblue;
-        }
-
-        .second-nav-frame-wrapper{
-            display: flex;
-            position: relative;
-        }
-
-        .second-nav-container{
-            background-color: darkgrey;
-            height: 60vh;
-            width: 380px;
-            border-radius: 7px;
-        }
-    </style>
 </head>
     <body>
         <main>
-            <div class="side-bar-nav-wrapper">
-                <div class="first-left-nav-container">
-                    <div class="circle-icon"><i class="fas fa-list" title="Task List"></i></div>
-                    <div class="circle-icon"><i class="fas fa-calendar" title="Calendar"></i></div>
-                    <div class="circle-icon"><i class="fas fa-check-circle" title="Completed Tasks"></i></div>
-                    <div class="circle-icon"><i class="fas fa-plus-circle" title="Add Task"></i></div>
-                    <div class="circle-icon"><i class="fas fa-cog" title="Settings"></i></div>
+            <div class="wrapper">
+
+                <div class="header">
+                   
+                    <div class="social-icons-container">
+                       
+                        <div class="logo-container">
+                            <i class="fas fa-tasks logo-icon"></i> 
+                            <div class="logo-text">
+                                ToDo.com
+                            </div>
+                        </div>
+                      
+                        <div class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                    </div>
+        
+                   
+                    <div class="header-left">
+                        <div class="header-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure</span>
+                        </div>
+                        <div class="header-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Organized</span>
+                        </div>
+                        <div class="header-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Efficient</span>
+                        </div>
+                        <div class="header-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Smart</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="second-nav-frame-wrapper">
-                    <div class="second-nav-container"></div>
+
+
+                <div class="side-bar-nav-wrapper">
+
+                    <div class="user-icon-container">
+                        <div class="user-icon-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="welcome-text">
+                            <span>Welcome Buddy</span>
+                            <i class="fas fa-smile"></i> 
+                        </div>
+                    </div>
+
+                    <div class="first-left-nav-container">
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-list" title="Task List"></i>
+                            </div>
+                            <div class="button-container">
+                                <button id="taskListBtn" class="active">Task List</button>
+                            </div>
+                        </div>
+
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-plus-circle" title="Add Task"></i>
+                            </div>
+                            <div class="button-container">
+                                <button id="addTaskBtn">Add Task</button>
+                            </div>
+                        </div>
+
+                        <div class="circle-icon">
+                            <div class="icon-container">
+                                <i class="fas fa-check-circle" title="Completed Tasks"></i>
+                            </div>
+                            <div class="button-container">
+                                <button id="completedTasksBtn">Completed Tasks</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="second-nav-frame-wrapper" id="modal">
+                        <div class="second-nav-container">
+                            <span class="close">&times;</span>
+
+                             <!-- View Taks -->
+                            <div id="taskListView">
+                                <h2>Your Tasks</h2>
+                                <div id="tasksList" class="task-list">
+                                    <p class="empty-message">No tasks yet. Add your first task!</p>
+                                </div>
+                            </div>
+
+                             <!-- Add Taks -->
+                            <div id="addTaskView" style="display: none;">
+                                <h2>Add New Task</h2>
+                                <form id="addTaskForm" class="add-task-form">
+                                    <div class="form-group">
+                                        <label for="taskTitle">Task Title</label>
+                                        <input type="text" id="taskTitle" required>
+                                    </div>
+                                    <button type="submit" class="submit-btn">Add Task</button>
+                                </form>
+                            </div>
+
+                            <!-- Completed Taks -->
+                            <div id="completedTasksView" style="display: none;">
+                                <h2>Completed Tasks</h2>
+                                <div id="completedTasksList" class="task-list">
+                                    <p class="empty-message">No completed tasks yet.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
     </body>
+    <script src="app.js"></script>
 </html>
