@@ -210,7 +210,8 @@ body {
 }
 
 .button-container button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: white; 
+    color: black;
 }
 
 
