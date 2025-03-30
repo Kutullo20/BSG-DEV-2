@@ -51,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
    
 });
 
+// Get the modal
+let modal = document.getElementById("modal");
+
 // Event Listeners
 function setupEventListeners() {
     Object.entries(buttons).forEach(([view, btn]) => 
@@ -70,6 +73,28 @@ function showView(viewName) {
     if (viewName === 'taskList') renderTasks(false);
     else if (viewName === 'completedTasks') renderTasks(true);
     else if (editingTaskId === null) addTaskForm.reset();
+
+    // When the user clicks the button (width <= 987), open the task container named modal 
+    if(screen.width <= 987){
+        modal.style.display = "block";
+    }
+}
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal (width <= 987), close it
+if(screen.width <= 987){
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
 }
 
 // Handling Taks
