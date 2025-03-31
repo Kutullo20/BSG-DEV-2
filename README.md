@@ -28,6 +28,9 @@
    ```bash
    Open http://localhost:3000 in your browser
 
+## 🌍 Live site
+Check out the live version of the project [here](https://willowy-moonbeam-54c3d5.netlify.app/).
+
 ## 🖥️ About The Server:
 
 This project uses  lightweight Node.js HTTP server that ⚡ asynchronously serves static files (📄 HTML, 🎨 CSS, 🤖 JS) with love!
