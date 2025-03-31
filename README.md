@@ -43,7 +43,7 @@ This project uses  lightweight Node.js HTTP server that ⚡ asynchronously serve
 - 📩 While waiting for fs.readFile() to complete (e.g., loading index.html), the server remains responsive and can process other incoming requests.
 - 📂 No Database: Relies on local file storage (static files like HTML/CSS/JS).
 
-## 🚀 ES6 Features
+## 🚀 Key ES6 Features Used
 
 - ➡️ **Arrow Functions**
 - 📝 **Template Literals**
