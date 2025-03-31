@@ -6,23 +6,29 @@
 - Terminal/Command Prompt
 
 ### 🛠️ Setup Instructions
-1. **Verify Node.js Installation**
+1. **Verify Node.js Installation:**
    ```bash
    node -v
-2. **Clone or download the project:**
+2. **If Node.js is Not Installed:**
+   ```bash
+   You'll see an error message or no version number.
+3. **Installing Node.js:**
+   ```bash
+   To install Node.js, visit the official Node.js Download Page[https://nodejs.org/en] and follow the instructions for your operating system.
+4. **When node is installed:Clone or download the project:**
    ```bash
    git clone https://github.com/Kutullo20/BSG-DEV-2.git
-3. **Navigate to project directory:**
+5. **Navigate to project directory:**
    ```bash
    cd your-project-folder
-4. **Run the server:**
+6. **Run the server:**
    ```bash
    node server.js
-5. **Access Your Site:**
+7. **Access Your Site:**
    ```bash
    Open http://localhost:3000 in your browser
 
-## 🌟 About The Server:
+## 🖥️ About The Server:
 
 This project uses  lightweight Node.js HTTP server that ⚡ asynchronously serves static files (📄 HTML, 🎨 CSS, 🤖 JS) with love!
 
