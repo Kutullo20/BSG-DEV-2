@@ -54,6 +54,9 @@ This project uses  lightweight Node.js HTTP server that ⚡ asynchronously serve
 - 🔍 **Object.entries()** and **Object.values()**
 - ✂️ **Object Property Shorthand**
 
+## 👀 Project Preview 
+
+
 
 
    
