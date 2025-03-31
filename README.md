@@ -18,7 +18,7 @@
 4. **Run the server:**
    ```bash
    node server.js
-5. ** Access Your Site**
+5. **Access Your Site:**
    ```bash
    Open http://localhost:3000 in your browser
 
@@ -32,7 +32,7 @@ This project uses  lightweight Node.js HTTP server that ⚡ asynchronously serve
 - ⏳ **Non-blocking I/O** (thanks to async/await)
 - ❤️ **Graceful 404 errors** (Missing files return a 404 without crashing the server)
 
-## 🔄Asynchronization
+## 🔄 Asynchronization
 - 🔄 The server in this project uses async/await for non-blocking I/O, ensuring efficient handling of file operations. 
 - 📩 While waiting for fs.readFile() to complete (e.g., loading index.html), the server remains responsive and can process other incoming requests.
 - 📂 No Database: Relies on local file storage (static files like HTML/CSS/JS).
