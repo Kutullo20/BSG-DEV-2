@@ -55,6 +55,7 @@ This project uses  lightweight Node.js HTTP server that ⚡ asynchronously serve
 - ✂️ **Object Property Shorthand**
 
 ## 👀 Project Preview 
+![Preview Image](PREVIEW-IMG.png)
 
 
 
